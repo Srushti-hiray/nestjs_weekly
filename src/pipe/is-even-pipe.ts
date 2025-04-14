@@ -1,4 +1,4 @@
-// src/common/pipes/is-even.pipe.ts
+
 import { PipeTransform, Injectable, BadRequestException } from '@nestjs/common';
 
 @Injectable()

@@ -6,7 +6,7 @@ import { UsersModule } from './users/users.module';
 import { TimeoutModule } from './timeout/timeout.module';
 import { RateLimiterMiddleware } from './middleware/rate-limiter-middleware';
 
-// ✅ Import the new modules
+
 import { CartModule } from './cart/cart.module';
 import { OrderModule } from './order/order.module';
 import { PaymentModule } from './payment/payment.module';
@@ -18,12 +18,12 @@ import { EmploymentModule } from './employment/employment.module';
   imports: [
     UsersModule,
     TimeoutModule,
-    CartModule,     // ✅ Added CartModule
-    OrderModule,    // ✅ Added OrderModule
+    CartModule,    
+    OrderModule,    
     PaymentModule, 
     UserdtoModule ,
     UsereduModule,
-    EmploymentModule// ✅ Added PaymentModule
+    EmploymentModule
   ],
   controllers: [AppController],
   providers: [AppService],

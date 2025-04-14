@@ -13,7 +13,7 @@ export interface Order {
 
 @Injectable()
 export class OrderService {
-  private orders: Order[] = []; // ✅ Strongly typed
+  private orders: Order[] = []; 
 
   createOrder(cartItems: CartItem[]): Order {
     const order: Order = {

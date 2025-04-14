@@ -8,7 +8,7 @@ export class TimeoutService {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve('Task completed after 10 seconds');
-      }, 1000); // Simulate long task (10 seconds)
+      }, 10000); // Simulate long task (10 seconds)
     });
   }
 }

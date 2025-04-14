@@ -1,4 +1,4 @@
-// src/cart/exceptions/insufficient-stock.exception.ts
+
 import { HttpException, HttpStatus } from '@nestjs/common';
 
 export class InsufficientStockException extends HttpException {
