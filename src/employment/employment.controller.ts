@@ -7,6 +7,8 @@ import {
     ValidationPipe 
   } from '@nestjs/common';
   import { EmploymentService } from './employment.service';
+import { CreateEmploymentDto } from './dto/create-employement.dto';
+import { CountryCode } from './decorators/country-code.decorator';
   
   @Controller('employment')
   export class EmploymentController {
@@ -15,8 +17,9 @@ import {
     @Post()
     @UsePipes(new ValidationPipe({ transform: true }))
     async create(
-      @Body() body: any,
-      @Headers('x-country-code') countryCode: string = 'US',
+      @Body() body: CreateEmploymentDto,
+      @CountryCode() countryCode: string
+
     ) {
       return this.employmentService.createEmployment(body, countryCode.toUpperCase());
     }
